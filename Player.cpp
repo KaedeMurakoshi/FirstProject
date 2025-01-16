@@ -17,10 +17,10 @@ void Player::MoveBase() {
 
 	// ÉpÉhÉãëÄçÏ
 	if (CheckHitKey(_upKey)) {
-		_pos.y -= PADDLE_SPEED;
+		_pos.y -= PLAYER_SPEED;
 	}
 
 	if (CheckHitKey(_downKey)) {
-		_pos.y += PADDLE_SPEED;
+		_pos.y += PLAYER_SPEED;
 	}
 }

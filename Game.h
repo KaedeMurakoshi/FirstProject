@@ -18,17 +18,18 @@ public:
 private:
 	void DrawObjects(); // 全てのオブジェクトを描画。毎フレーム呼ぶ
 	void DrawUI();		// UI描画。毎フレーム呼ぶ　
-	void ResetGame();
-	void EndGame();
+	void Interval();    // 得点後のインターバル
+	void ResetGame();	// ゲームをリセット
+	void EndGame();		// ゲーム終了時の処理
 	
-
+	
 public:
 	Player _player;
 	CPU _cpu;
 	Ball _ball;
 
 private:
-	FPS_Controller* _fpsController;
+	FPS_Controller* _fpsController;	// FPS調整用
 	int _playerScore;
 	int _cpuScore;
 };

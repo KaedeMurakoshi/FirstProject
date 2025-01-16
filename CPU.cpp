@@ -20,17 +20,17 @@ void CPU::MoveBase() {
 	_lastPos = _pos;
 
 	// ボールが画面の右半分にいて、自分に向かってきているときだけ移動する
-	if (_ballPos.x > SCREEN_SIZE_X / 2 && _ballSpeed.x > 0) {
+	if (_ballPos.x > SCREEN_SIZE_X * 0.7 && _ballSpeed.x > 0) {
 
 		// パドルの中心座標を求める
 		float center = _pos.y + PADDLE_SIZE_Y / 2;
 
-		// 自分がボールより下にいたら上に移動、自分が上にいたら下に移動する単純な設計
+		// 自分がボールより下にいたら上に移動、自分が上にいたら下に移動する
 		if (center > _ballPos.y) {
-			_pos.y -= PADDLE_SPEED;
+			_pos.y -= CPU_SPEED;
 		}
 		else{
-			_pos.y += PADDLE_SPEED;
+			_pos.y += CPU_SPEED;
 		}
 	}
 }

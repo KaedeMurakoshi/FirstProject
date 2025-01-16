@@ -18,11 +18,16 @@
 // パドルのX座標ww
 #define PADDLE_POS_X    (64)
 // パドルの移動速度
-#define PADDLE_SPEED    (10)
+#define PLAYER_SPEED    (10)
+#define CPU_SPEED		(8)
 
 // １１点先取
 #define GAME_POINT (11)
 
+// 得点後のインターバル
+#define INTERVAL_TIME (3000) // 3秒
+
+// パドル管理用列挙型
 typedef enum{
 	PADDLE_NONE,
 	PADDLE_PLAYER,

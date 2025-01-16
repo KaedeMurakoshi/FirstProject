@@ -21,13 +21,18 @@ public:
 		return _pos;
 	}
 
+	// ボールの座標上書き
+	void SetPos(VECTOR newPos) {
+		_pos = VGet(newPos.x, newPos.y, 0);
+	}
+
 	// ボールのスピード取得用
 	const VECTOR GetSpeed() const {
 		return _speed;
 	}
-	// ボールの座標上書き
-	void SetPos(VECTOR newPos) {
-		_pos = newPos;
+
+	void SetSpeed(VECTOR newSpeed) {
+		_speed = newSpeed;
 	}
 
 	const PADDLE_TYPE GetPointFlag() {

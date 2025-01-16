@@ -10,8 +10,14 @@ public:
 	Paddle();
 	virtual ~Paddle();
 	
+	// 座標取得用
 	VECTOR GetPos() {
 		return _pos;
+	}
+
+	// 座標上書き用
+	void SetPos(VECTOR newPos){
+		_pos = newPos;
 	}
 
 	void Move(); // 派生クラスの
